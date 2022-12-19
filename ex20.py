@@ -1,11 +1,11 @@
-#Here, I'm checking that .read does not automatically revert to the address of the first byte after 
+#Here, I'm checking that .read does not automatically revert to the address of the first byte after execution
 
 
 from sys import argv
 
 script, from_file, to_file = argv
 
-#read from_file first, then write from file into to_file
+#read from_file first, then write from_file into to_file
 
 #showing initial contents of .read
 print (to_file.read())
@@ -18,8 +18,7 @@ second_file = open(to_file, 'w')
 second_file.write(current_file_data)
 #this should write one line into to_file
 
-to_file.seek(0) #go back to address of first byte
-print (to_file.read())
+print (current_file.read())
 
 
 
