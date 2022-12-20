@@ -3,23 +3,23 @@
 
 from sys import argv
 
-script, from_file, to_file = argv
+script, from_file, into_file = argv
 
-#read from_file first, then write from_file into to_file
+#read from_file first, then write from_file into into_file
 
-#showing initial contents of .read
-print (to_file.read())
+#showing initial contents of into_file
+print (into_file.read())
 
 current_file = open(from_file)
 current_file_data = current_file.readline()
 
-#should be at address of (final byte + 1) of fromfile now
-second_file = open(to_file, 'w')
+#should be at address of (first byte of second line) of fromfile now
+second_file = open(into_file, 'w')
 second_file.write(current_file_data)
-#this should write one line into to_file
+#this should write at the start of the second line of into_file
 
-print (current_file.read())
-
+print (into_file.read())
+#compare the difference
 
 
 
