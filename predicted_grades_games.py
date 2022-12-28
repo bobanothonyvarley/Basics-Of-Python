@@ -1,5 +1,4 @@
-#In this game, you must travel from teacher to teacher to try to make a joke to them, and get your predicted grade increased
-
+#go to line 148 for a full description
 
 class Scene:
     def enter(self):
