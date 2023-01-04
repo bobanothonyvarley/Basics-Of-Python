@@ -1,3 +1,7 @@
+#this program will scan user input, and primitively sort them into different types of words, ie, nouns, verbs, etc.
+#It doesn't apply these new meanings to anything, it just catagorises your words
+
+#In the Lexicon class is all the words that this program can identify
 
 class Lexicon:
     direction_words = {'north': 'north', 'south': 'south', 'east': 'east', 'west': 'west', 
@@ -16,18 +20,13 @@ class Lexicon:
 
 
 
-
-
-
-
-
 def input_scanner(input):
     list = input.casefold()  #change string to lowercase
     list = list.replace((',', '.', '\'', '\"'), '')
     sentence = list.split(' ')
     count = 0 #used to index into list
 
-    for i in sentence:
+    for i in sentence: #this compares the current (user input) word to every word in the Lexicon
         current_element_is_in_Lexicon = False #used for error handling
         for current_type_of_word in Lexicon.types_of_words:
             for word in current_type_of_word:
