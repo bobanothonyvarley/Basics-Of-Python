@@ -24,7 +24,7 @@ def message_chatGPT(message, text_presentation=0, existing_messages=[]):
 
     #gain access with api key
     # IMPORTANT: do not store API key on Github in plain text, i've heard a few horror stories about AWS users leaving their API key in a public repo, then some web scraper finds it and uses 5000 dollars worth of API calls.
-    api_key = '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'
+    api_key = 'dont even think about it'
     client = OpenAI( api_key=api_key)
 
     #get reponses, this is just how using the api works
